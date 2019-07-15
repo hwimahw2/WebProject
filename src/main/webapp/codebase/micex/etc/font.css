@@ -1,0 +1,56 @@
+/* 
+    Document   : font
+    Created on : 28.10.2008, 13:07:09
+    Author     : etin
+    Description:
+        Purpose of the stylesheet follows.
+*/
+
+/* 
+   TODO customize this sample style
+   Syntax recommendation http://www.w3.org/TR/REC-CSS2/
+*/
+
+input{
+  font-family: Tahoma, sans-serif;
+}
+
+textarea{
+  font-family: Tahoma, sans-serif;
+}
+
+table{
+    font-family: Tahoma, sans-serif;
+}
+
+body{
+    font-family: Tahoma, sans-serif;
+}
+
+.infoInput{
+    background-color:#E5F2F8;
+    color: #0033cc;
+    font-size: 11pt;
+    border-top-style: solid;
+    border-top-width: 1px;
+    border-bottom-style: solid;
+    border-left-style: solid;
+    border-right-style: solid;
+    border-bottom-width: 1px;
+    border-left-width: 1px;
+    border-right-width: 1px;
+    border-bottom-color: #006676;
+    border-left-color: #006676;
+    border-right-color: #006676;
+    border-top-color: #006676;
+}
+
+.ctrlPanel{
+    background-color: #EDEDED;
+    margin-top:5px;
+    padding: 4px;
+    border: 1px solid #91A7B4;
+    font-family:Tahoma, sans-serif;
+    font-size:11px;
+}
+

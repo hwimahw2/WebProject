@@ -1,0 +1,213 @@
+.right {
+    margin-left: 160px;
+}
+
+.table-label {
+    display: inline-block;
+    width: 130px;
+}
+
+.table-label-wide {
+    display: inline-block;
+    width: 170px;
+}
+
+.table-all {
+    width: 780px;
+    min-width: 500px;
+    box-sizing: border-box;
+    border-spacing: 10px 8px;
+    display: block;
+}
+
+.border-cell {
+    border: 1px solid #91A7B4;
+    box-sizing: border-box;
+    padding: 5px;
+}
+
+.border-cell p {
+    margin: 5px 5px;
+}
+
+input[readonly] {
+    color:dimGray;
+}
+input {
+    padding-left:3px;
+}
+
+.input-right {
+    width: 180px;
+}
+
+/* Global Operation start */
+.global_operations .border-cell {
+    border: 1px solid #91A7B4;
+    box-sizing: border-box;
+    padding: 5px;
+}
+
+.global_operations .panelBorder {
+    margin: 0 0 10px;
+}
+
+.global_operations .clear-all {
+    clear: both;
+}
+
+.global_operations .table-all {
+    width: 910px;
+    min-width: 650px;
+    box-sizing: border-box;
+    margin: 10px 5px;
+    padding: 0px 0;
+    border-spacing: 10px 8px;
+    display: block;
+}
+
+.global_operations .table-all p {
+    margin: 0 0 7px;
+}
+
+.global_operations .table-all__text {
+    resize: none;
+    height: 70px;
+    width: 100%;
+    margin: 0 5px 0 0;
+    box-sizing: border-box;
+}
+
+.global_operations .table-all__text-2 {
+    width: 398px;
+    margin: 0 0px 0 0;
+    box-sizing: border-box;
+}
+
+.global_operations .table-all__text-3 {
+    width: 331px;
+    margin: 0 0px 0 0;
+    box-sizing: border-box;
+}
+
+.global_operations .table-all__checkbox {
+    cursor: pointer;
+}
+
+.global_operations .table-all__number {
+    width: 150px;
+    margin: 0 10px 0 5px;
+}
+
+.global_operations .table-all__label {
+    display: inline-block;
+    width: 185px;
+}
+
+.global_operations .table-all__date {
+    width: 150px;
+    margin: 0 0px 0 5px;
+}
+
+.global_operations .table-all__checkbox-input {
+    position: relative;
+    top: 3px;
+}
+
+.global_operations #dhtmlxCalendar1_dblCal,
+.global_operations #dhtmlxCalendar2_dblCal {
+    z-index: 11111
+}
+
+.global_operations .checkbox_list {
+    width: 600px;
+}
+
+.global_operations .checkbox_list label {
+     display: inline-block;
+    cursor: pointer;
+}
+
+.global_operations .checkbox_list .wrapper-label-checkbox {
+    width:42%;
+    display:inline-block;
+    float: left;
+}
+
+.global_operations .checkbox_list input {
+    position: relative;
+    top: 3px;
+}
+
+.global_operations .text-input {
+    width: 250px;
+}
+
+.global_operations  label.table-all__checkbox {
+    width: 48%;
+    display: block;
+    float: left;
+}
+
+.global_operations label.table-all__checkbox .table-all__checkbox-input {
+    margin: 3px 5px 3px 0;
+    display: inline-block;
+}
+
+.global_operations .table-all__text-left-block {
+    width: 250px;
+}
+ .all_wrapper {
+     width: 720px;
+     margin: 0 auto;
+ }
+
+.global_operations .big-text-cell {
+    width: 49%;
+    display: inline-block;
+    float: left;
+}
+
+.global_operations .big-text-cell .table-all__number {
+    margin: 5px 10px 0 0px;
+    width: 190px;
+}
+
+.global_operations .big-text-cell .table-all__date {
+    margin: 5px 5px 0 10px;
+    width: 187px;
+}
+
+.global_operations .big-text-cell .table-all__label-2 {
+    min-height:26px ;
+    display: inline-block;
+}
+
+.global_operations .big-text-cell .table-all__label-3 {
+    min-height:26px ;
+    display: inline-block;
+    margin-left: 13px;
+}
+
+/*Таблица на дивах -->*/
+.divTableContainer {
+    display: table;
+    width: 100%;
+}
+
+.divTableRow {
+    display: table-row;
+}
+
+.divTableLeft, .divTableRight, .divTableMiddle {
+    display: table-cell !important;
+    vertical-align: top;
+}
+/*--<*/
+
+.width100pr {
+    width: 99%;
+}
+
+
+/* Global Operation end */

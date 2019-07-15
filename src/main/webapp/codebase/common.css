@@ -1,0 +1,408 @@
+incorrect_multilinegeneralFont
+{
+    font-size: 11px;
+    font-family: Tahoma,serif;
+}
+
+.small_font
+{
+    font-family:Tahoma,serif;
+    font-size:11px;
+}
+
+input.white_disabled
+{    
+    background-color: white;
+    font-style: normal;
+    font-weight: normal;
+    color: black;
+    text-decoration: none;
+    border: 1px solid #91A7B4;
+}
+
+.tempHidden
+{
+    display:none
+}
+
+.required
+{
+    background-color: #84ffff
+}
+
+.required_content * {
+    background-color: #84ffff
+}
+
+.disabled {
+    color: #777777;
+}
+
+input.correct_filter
+{
+    background-color: #7ad591}
+
+input.incorrect_filter
+{
+    background-color: #fa9d9d}
+
+textarea.incorrect_multiline
+{
+    background-color: #fa9d9d    
+}
+
+.incorrect_value
+{
+    background-color: #fa9d9d
+}
+    
+span.req
+{
+    color:black
+}
+
+.paneBorder
+{
+    border: 1px solid #0000cc;
+    padding: 4px;
+    overflow: hidden;
+    margin-top: 10px;
+    box-sizing: border-box;
+    min-width: 100%;
+}
+
+.legend
+{
+    border: 1px outset #888888;
+    background-color: #d9f5ff;
+    cursor: pointer;
+    padding: 2px 18px;
+    font-size: 13px;
+    font-weight: bold;
+    font-family: Tahoma,serif;
+    font-style: normal;
+    font-variant: normal;
+    color: #000099;
+}
+
+.innerTable 
+{
+    padding:  0px 0px 0px 0px;
+    font-family:Tahoma,serif;
+    font-size:11px;
+}
+
+.infoField
+{
+  background-color:#E5F2F8;
+  font-family: Tahoma,serif;
+  font-style: normal;
+  color: #0033cc;
+  font-weight: normal;
+  border: 1px solid #006676;
+  margin-bottom:1px;
+  padding:2px 1px 2px 3px;
+}
+
+.fillGrey
+{
+  background-color: #c8c8c8;
+}
+
+.alertText
+{
+  font-family: Arial,Helvetica,sans-serif;
+  font-size: 14px;
+  font-weight: bold;
+  color: red;
+  font-style: normal;
+  font-variant: normal;
+}
+
+/* Next block added by Alexey Parfenov */
+
+	h2 {
+		font-size: 16px;
+		margin: 0.83em 0px;
+	}
+	
+    .container{
+        margin-top: 5px;
+        background: #E5F2F8;
+
+        padding-left:4px;
+        padding-right:4px;
+
+        border: 1px solid #91A7B4;
+    }
+
+    .descDef{
+        padding:5px;
+    }
+
+    .fieldValue{
+        color: black;
+        font-size: 12px;
+        font-weight:bold;
+        font-family:Tahoma,serif;
+        text-align: left;
+    }
+
+    .gridContainer {
+        width: 100%;
+        height: 300px;
+        margin-top: 20px;
+        margin-bottom: 10px;
+        position: relative;
+    }
+
+    .gridContainerMulti {
+        width: 100%;
+        height: 200px;
+        margin-top: 20px;
+        margin-bottom: 10px;
+        position: relative;
+    }
+
+    .gridContainerHigh {
+        width: 100%;
+        height: 600px;
+        margin-top: 20px;
+        margin-bottom: 10px;
+        position: relative;
+    }
+
+    .gridContainerDetails {
+        width: 100%;
+        height: 150px;
+        margin-top: 20px;
+        margin-bottom: 10px;
+        position: relative;
+    }
+
+    .gridContainerBlock {
+        width: 99%;
+        height: 90px;
+        margin-top: 5px;
+        margin-bottom: 5px;
+        position: relative;
+    }
+
+    .gridContainerBlock1 {
+        width: 99%;
+        height: 60px;
+        margin-top: 5px;
+        margin-bottom: 5px;
+        position: relative;
+    }
+
+    .gridContainerBlock2 {
+        width: 100%;
+        height: 150px;
+        margin-top: 5px;
+        margin-bottom: 5px;
+        position: relative;
+    }
+
+    .gridContainerBlock3 {
+        width: 100%;
+        height: 120px;
+        margin-top: 5px;
+        margin-bottom: 5px;
+        position: relative;
+    }
+
+    div.tab{
+        padding:5px;
+    }
+
+    input.button {
+        font-family: Tahoma,serif;
+        font-size: 11px;
+        color: #003399;
+        font-variant: normal;
+        font-weight: bolder;
+        font-style: normal;
+    }
+    
+    input.button:disabled {
+    	color: graytext;
+    }
+
+    input.bigAddButton {
+        width:100%;
+        height:40px;
+        font-family: Tahoma,serif;
+        font-size: 11px;
+        color: #003399;
+        font-variant: normal;
+        font-weight: bolder;
+        font-style: normal;
+    }
+
+    .controlPanel{
+        background-color: #EDEDED;
+
+        margin-top:5px;        
+        border: 1px solid #91A7B4;
+
+        font-family: Tahoma,serif;
+        font-size: 11px;
+        padding-top: 5px;
+        padding-bottom: 5px;
+        padding-left: 5px;
+    }
+
+    .errorBlock{
+        background-color: #FA9D9D;
+        border: 1px solid #B94A48;
+        padding: 5px;
+    }
+    
+    .controlPanel div {
+        display: inline;
+    }
+
+    input.longButton {
+        width:100%;
+    }
+
+    .controlPanelElem {
+        cursor: default;
+        margin-left: 5px;
+        margin-right: 5px;       
+    }
+    
+    div.controlPanelElem {
+        display: inline;
+    }
+
+    span.subTitle{
+        color:#000099
+    }
+
+    /*заменитель тега h4*/
+    span.h4 {
+        font-size: 17px;
+        font-weight: bold;
+    }
+
+    input {
+        font-size: 13px;        
+    }
+
+    textarea {
+        font-size: 13px;
+    }
+    /*
+      for readonly inputs
+    */
+    input.readOnly {
+        color: #999999;        
+    }
+
+    /*double calendar 2 css style*/
+    .calendar2 {
+        background: #FFFFFF none repeat scroll 0;
+        color: #000000;
+        font-family: Tahoma, Arial, Helvetica, sans-serif;
+        font-size: 11px;
+        padding: 0;
+    }
+
+    /* календарь на формах с голубым фоном*/
+    .calendarRepeaterInputForm {
+        border-width: 0; /*color: #0000cc;*/
+        background-color:inherit;/*#F0F8FF;*/
+        color: black;
+        font-size: 17px;
+        font-family: Tahoma, serif;
+        text-align: center;
+        width: 179px;
+    }
+    /* календарь на формах с белым фоном*/
+    .calendarRepeaterInput {
+        border-width: 0;
+        /*color: #0000cc;*/
+        color: black;
+        font-size: 17px;
+        font-family: Tahoma, serif;
+        text-align: center;
+        width: 179px;
+    }
+
+    .calendarRepeaterDiv {
+        border: 1px solid black;
+        /*border: 1px solid #0000cc;*/
+        position: relative;
+        width: 202px;
+    }
+
+    img.calendarPicture {
+        cursor: pointer;
+        left: 182px;
+        position: absolute;
+        top: 3px;
+        width: 18px;
+    }
+
+    .not_m_line{
+        white-space:nowrap; overflow:hidden;
+    }
+
+/* подсказки для полей */
+    div.tooltip {
+        position: absolute;
+        margin-top: 5px;
+        border: 1px solid #c93;
+        padding: 5px 6px;
+        background: #ffc;
+        font-size: 11px;
+        font-family: Tahoma, serif;
+        z-index: 100;
+    }
+/*----------------------------------*/
+/*стили для загрузки файла*/
+    div.prog-border {
+        height: 12px;
+        width: 105px;
+        background: #fff;
+        border: 1px solid #000;
+        margin: 0;
+        padding: 0;
+    }
+
+    div.prog-bar {
+        height: 10px;
+        margin: 1px;
+        padding: 0px; /*background: #00ff00;*/
+        background: #0033cc;
+    }
+
+    div.upload-status {
+        position: absolute;
+        margin-left: 107px;
+        margin-top: -16px;
+    }
+
+    div.error {
+        color: #ff0000;
+        font-weight: bold;
+    }
+
+    div.congrat{
+        color:red;
+        font-family:cursive;
+        font-size:30px;
+
+        position:absolute;
+        top:20%;
+        left:20%;
+    }
+
+/*----------------------------------*/
+body{
+    /*цвет фона для параллельного контура*/
+    /*background-color: #e0ffff;    */
+}
+/* Previous block added by Alexey Parfenov */

@@ -1,0 +1,34 @@
+/* 
+    Document   : dialogWindow
+    Created on : 10.09.2008, 15:10:39
+    Author     : davydov
+    Description:
+        Purpose of the stylesheet follows.
+*/
+
+/* 
+   TODO customize this sample style
+   Syntax recommendation http://www.w3.org/TR/REC-CSS2/
+*/
+body {
+    margin-top:10px;
+    margin-left:10px;
+}
+
+.paramKey {
+    font-family: Tahoma;
+    font-size: 10pt;
+    font-weight: bolder;
+    color: #000000;
+    font-style: normal;
+    font-variant: normal;
+}
+
+.paramValue {
+    font-family: Tahoma;
+    font-size:10pt;
+    font-weight: bolder;
+    color: #0066ff;    
+  font-style: normal;
+  font-variant: normal;
+}
