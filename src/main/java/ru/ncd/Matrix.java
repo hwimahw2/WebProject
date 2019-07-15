@@ -22,7 +22,6 @@ public class Matrix{
                 }
             }
         }
-        String str = sb.toString();
         return sb.toString();
     }
 

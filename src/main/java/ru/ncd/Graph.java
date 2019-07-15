@@ -15,6 +15,19 @@ public class Graph {
         fillGraph(matrix, matrix.n, matrix.m);
     }
 
+    public String toString(){
+        StringBuffer sb = new StringBuffer();
+        for(int i = 0; i < n; i++){
+            for(int j = 0; j < n; j++){
+                sb.append(arrayGraph[i][j]);
+                if(j == (n - 1)){
+                    sb.append('\n');
+                }
+            }
+        }
+        return sb.toString();
+    }
+
     public void fillGraphMiddlePartOfMatrix(Matrix matrix, int i, int j, int n, int m){
         if (matrix.arrayMatrix[i][j] == '#') {
             arrayGraph[i * m + j][i * m + j] = '1';

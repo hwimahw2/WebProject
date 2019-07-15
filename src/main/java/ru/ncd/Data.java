@@ -3,23 +3,42 @@ import net.sf.json.*;
 import java.io.FileNotFoundException;
 
 public class Data {
-    String data;
+    Matrix matrix;
+    String dataMatrix;
+    Graph graph;
+    String dataGraph;
 
     public String getData() throws FileNotFoundException {
-        Matrix matrix = new Matrix();
+        StringBuffer sb = new StringBuffer();
+        matrix = new Matrix();
         JSONObject json = new JSONObject();
         JSONArray rows = new JSONArray();
-        JSONArray data1 = new JSONArray();
-        JSONObject jo1 = new JSONObject();
-        int id1 = 1;
-        data1.element(matrix.n);
-        data1.element(matrix.m);
-        data1.element(matrix.toString());
-        jo1.element("id", id1);
-        jo1.element("data", data1);
-        rows.element(jo1);
+        JSONArray data = new JSONArray();
+        JSONObject jo = new JSONObject();
+        int id = 1;
+        data.element(matrix.n);
+        data.element(matrix.m);
+        data.element(matrix.toString());
+        jo.element("id", id);
+        jo.element("data", data);
+        rows.element(jo);
         json.element("rows", rows);
-        data = json.toString();
-        return data;
+        dataMatrix = json.toString();
+        sb.append(dataMatrix);
+       /* json = new JSONObject();
+        rows = new JSONArray();
+        data = new JSONArray();
+        jo = new JSONObject();
+        id = 2;
+        data.element(graph.n);
+        data.element(graph.toString());
+        jo.element("id", id);
+        jo.element("data2", data);
+        rows.element(jo);
+        json.element("rows", rows);
+        dataGraph = json.toString();
+        sb.append(dataGraph);*/
+
+        return sb.toString();
     }
 }
