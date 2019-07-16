@@ -101,7 +101,7 @@ var DpoTools = {
     },
 
     searchFieldsInitRules: function () {
-        var elems = $('div_searchParameters').getElementsByTagName('input');
+        var elems = $('div_searchParameters').getElementsByTagName('ru.ncd.input');
         var fieldsArray = [];
         for (var i = 0; i < elems.length; i++) {
             fieldsArray.push(elems[i].id);
@@ -250,7 +250,7 @@ var DpoTools = {
             return -1;
         }
         if (!Tools.def(url)){
-            url = "input";
+            url = "ru.ncd.input";
         }
         dlgWidth = Tools.def(data.get('winWidth')) ? data.get('winWidth') :
             (screen.width >= 1024 ? screen.width - 200 : screen.width - 600);

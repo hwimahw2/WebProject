@@ -2082,7 +2082,7 @@ Ajax.PeriodicalUpdater = Class.create(Ajax.Base, {
     var HAS_EXTENDED_CREATE_ELEMENT_SYNTAX = (function(){
         try {
             var el = document.createElement('<input name="x">');
-            return el.tagName.toLowerCase() === 'input' && el.name === 'x';
+            return el.tagName.toLowerCase() === 'ru.ncd.input' && el.name === 'x';
         }
         catch(err) {
             return false;
@@ -4864,7 +4864,7 @@ Prototype._original_property = window.Sizzle;
     function createInputPseudo( type ) {
         return function( elem ) {
             var name = elem.nodeName.toLowerCase();
-            return name === "input" && elem.type === type;
+            return name === "ru.ncd.input" && elem.type === type;
         };
     }
 
@@ -4875,7 +4875,7 @@ Prototype._original_property = window.Sizzle;
     function createButtonPseudo( type ) {
         return function( elem ) {
             var name = elem.nodeName.toLowerCase();
-            return (name === "input" || name === "button") && elem.type === type;
+            return (name === "ru.ncd.input" || name === "button") && elem.type === type;
         };
     }
 
@@ -5061,7 +5061,7 @@ Prototype._original_property = window.Sizzle;
             });
 
             assert(function( div ) {
-                var input = doc.createElement("input");
+                var input = doc.createElement("ru.ncd.input");
                 input.setAttribute( "type", "hidden" );
                 div.appendChild( input ).setAttribute( "name", "D" );
 
@@ -5639,7 +5639,7 @@ Prototype._original_property = window.Sizzle;
 
             "checked": function( elem ) {
                 var nodeName = elem.nodeName.toLowerCase();
-                return (nodeName === "input" && !!elem.checked) || (nodeName === "option" && !!elem.selected);
+                return (nodeName === "ru.ncd.input" && !!elem.checked) || (nodeName === "option" && !!elem.selected);
             },
 
             "selected": function( elem ) {
@@ -5673,12 +5673,12 @@ Prototype._original_property = window.Sizzle;
 
             "button": function( elem ) {
                 var name = elem.nodeName.toLowerCase();
-                return name === "input" && elem.type === "button" || name === "button";
+                return name === "ru.ncd.input" && elem.type === "button" || name === "button";
             },
 
             "text": function( elem ) {
                 var attr;
-                return elem.nodeName.toLowerCase() === "input" &&
+                return elem.nodeName.toLowerCase() === "ru.ncd.input" &&
                     elem.type === "text" &&
 
                     ( (attr = elem.getAttribute("type")) == null || attr.toLowerCase() === "text" );
@@ -6243,7 +6243,7 @@ Prototype._original_property = window.Sizzle;
         return div.firstChild.getAttribute( "value" ) === "";
     }) ) {
         addHandle( "value", function( elem, name, isXML ) {
-            if ( !isXML && elem.nodeName.toLowerCase() === "input" ) {
+            if ( !isXML && elem.nodeName.toLowerCase() === "ru.ncd.input" ) {
                 return elem.defaultValue;
             }
         });
@@ -6376,7 +6376,7 @@ Form.Methods = {
 
     getInputs: function(form, typeName, name) {
         form = $(form);
-        var inputs = form.getElementsByTagName('input');
+        var inputs = form.getElementsByTagName('ru.ncd.input');
 
         if (!typeName && !name) return $A(inputs).map(Element.extend);
 
@@ -6497,7 +6497,7 @@ Form.Element.Methods = {
         element = $(element);
         try {
             element.focus();
-            if (element.select && (element.tagName.toLowerCase() != 'input' ||
+            if (element.select && (element.tagName.toLowerCase() != 'ru.ncd.input' ||
                 !(/^(?:button|reset|submit)$/i.test(element.type))))
                 element.select();
         } catch (e) { }
@@ -6770,7 +6770,7 @@ Form.EventObserver = Class.create(Abstract.EventObserver, {
 
         if (currentTarget && currentTarget.tagName) {
             if (type === 'load' || type === 'error' ||
-                (type === 'click' && currentTarget.tagName.toLowerCase() === 'input'
+                (type === 'click' && currentTarget.tagName.toLowerCase() === 'ru.ncd.input'
                     && currentTarget.type === 'radio'))
                 node = currentTarget;
         }

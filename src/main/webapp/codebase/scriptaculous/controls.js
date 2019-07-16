@@ -515,7 +515,7 @@ Ajax.InPlaceEditor = Class.create({
     var control = this.options[mode + 'Control'];
     var text = this.options[mode + 'Text'];
     if ('button' == control) {
-      var btn = document.createElement('input');
+      var btn = document.createElement('ru.ncd.input');
       btn.type = 'submit';
       btn.value = text;
       btn.className = 'editor_' + mode + '_button';
@@ -539,7 +539,7 @@ Ajax.InPlaceEditor = Class.create({
     var text = (this.options.loadTextURL ? this.options.loadingText : this.getText());
     var fld;
     if (1 >= this.options.rows && !/\r|\n/.test(this.getText())) {
-      fld = document.createElement('input');
+      fld = document.createElement('ru.ncd.input');
       fld.type = 'text';
       var size = this.options.size || this.options.cols || 0;
       if (0 < size) fld.size = size;

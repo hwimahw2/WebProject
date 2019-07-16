@@ -1,4 +1,5 @@
 package ru.ncd;
+import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.util.Scanner;
@@ -27,7 +28,7 @@ public class Matrix{
 
     public void fillMatrix() throws FileNotFoundException{
         try {
-            Scanner sc = new Scanner(new FileReader("/home/mansur/IdeaProjects/MyWebProject/src/main/resources/input.txt"));
+            Scanner sc = new Scanner(new File("/home/mansur/IdeaProjects/MyWebProject/src/main/resources/input.txt"));
             this.n = sc.nextInt();
             this.m = sc.nextInt();
             sc.nextLine();

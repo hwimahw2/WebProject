@@ -2588,7 +2588,7 @@ var Tools = {
         if (elems != null) {
             var disableElem = function(elem) {
                 if ($(elem).tagName.toLowerCase() == "div") {
-                    $(elem).select('input').each(disableElem);
+                    $(elem).select('ru.ncd.input').each(disableElem);
                 } else {
                     if (Tools.def(keepStates) ? keepStates : false) {
                         alameda.debug("disableElements: elem="+elem+"; disabledState=" + $(elem).disabled);
@@ -2614,7 +2614,7 @@ var Tools = {
         if (elems != null) {
             var disableElem = function(elem) {
                 if ($(elem).tagName.toLowerCase() == "div") {
-                    $(elem).select('input').each(disableElem);
+                    $(elem).select('ru.ncd.input').each(disableElem);
                 } else {
                     if (Tools.def(useKeptStates) ? useKeptStates : false) {
                         var keptState = $(elem).readAttribute("disabledState");
@@ -3503,7 +3503,7 @@ function windowInput(prompt, title, defaultValue) {
 function _disableInputs(control, disabledValue, useTextArea)
 {
     var ctrl=$(control);
-    var types = ['input'];
+    var types = ['ru.ncd.input'];
     if (!Object.isUndefined(useTextArea) && useTextArea)
         types.push('textarea');
     for ( var i = 0; i < types.length; ++i ) {

@@ -49,7 +49,7 @@ dhtmlXCombo_checkboxOption.prototype.data = function(){return [this.value,this.t
 
 dhtmlXCombo_checkboxOption.prototype._DrawHeaderCheckbox = function(self, name, width)
 {
-    var z= document.createElement('input');
+    var z= document.createElement('ru.ncd.input');
     z.type='checkbox';
     z.className = (self.rtl)? 'dhx_combo_option_img_rtl':'dhx_combo_option_img';
     z.style.visibility = 'hidden';

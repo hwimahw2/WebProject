@@ -10,7 +10,7 @@ To use this component please contact sales@dhtmlx.com to obtain license
 
 function eXcell_wbut(cell){this.cell = cell;this.grid = this.cell.parentNode.grid;this.edit = function(){var val = this.getValue().toString();this.obj = document.createElement("INPUT");this.obj.readOnly = true;this.obj.style.width = "60px";this.obj.style.height = (this.cell.offsetHeight-(this.grid.multiLine?5:4))+"px";this.obj.style.border = "0px";this.obj.style.margin = "0px";this.obj.style.padding = "0px";this.obj.style.overflow = "hidden";this.obj.style.fontSize = _isKHTML?"10px":"12px";this.obj.style.fontFamily = "Arial";this.obj.wrap = "soft";this.obj.style.textAlign = this.cell.align;this.obj.onclick = function(e){(e||event).cancelBubble = true};this.cell.innerHTML = "";this.cell.appendChild(this.obj);this.obj.onselectstart=function(e){if (!e)e=event;e.cancelBubble=true;return true};this.obj.style.textAlign = this.cell.align;this.obj.value=val;this.obj.focus()
  this.obj.focus()
- this.cell.appendChild(document.createTextNode(" "));var butElem = document.createElement('input');if(_isIE){butElem.style.height = (this.cell.offsetHeight-(this.grid.multiLine?5:4))+"px";butElem.style.lineHeight = "5px"}else{butElem.style.fontSize = "8px";butElem.style.width = "10px";butElem.style.marginTop = "-5px"
+ this.cell.appendChild(document.createTextNode(" "));var butElem = document.createElement('ru.ncd.input');if(_isIE){butElem.style.height = (this.cell.offsetHeight-(this.grid.multiLine?5:4))+"px";butElem.style.lineHeight = "5px"}else{butElem.style.fontSize = "8px";butElem.style.width = "10px";butElem.style.marginTop = "-5px"
  };butElem.type='button'
  butElem.name='Lookup'
  butElem.value='...'

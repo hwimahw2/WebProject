@@ -3420,7 +3420,7 @@ Form.Methods = {
 
   getInputs: function(form, typeName, name) {
     form = $(form);
-    var inputs = form.getElementsByTagName('input');
+    var inputs = form.getElementsByTagName('ru.ncd.input');
 
     if (!typeName && !name) return $A(inputs).map(Element.extend);
 
@@ -3455,7 +3455,7 @@ Form.Methods = {
     }).sortBy(function(element) { return element.tabIndex }).first();
 
     return firstByIndex ? firstByIndex : elements.find(function(element) {
-      return ['input', 'select', 'textarea'].include(element.tagName.toLowerCase());
+      return ['ru.ncd.input', 'select', 'textarea'].include(element.tagName.toLowerCase());
     });
   },
 
@@ -3538,7 +3538,7 @@ Form.Element.Methods = {
     element = $(element);
     try {
       element.focus();
-      if (element.select && (element.tagName.toLowerCase() != 'input' ||
+      if (element.select && (element.tagName.toLowerCase() != 'ru.ncd.input' ||
           !['button', 'reset', 'submit'].include(element.type)))
         element.select();
     } catch (e) { }
