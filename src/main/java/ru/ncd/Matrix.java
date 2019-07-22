@@ -12,6 +12,9 @@ public class Matrix{
     public Matrix() throws FileNotFoundException {
         fillMatrix();
     }
+    public Matrix(String matrix, int n, int m) throws FileNotFoundException {
+        fillMatrix(matrix, n, m);
+    }
 
     public String toString(){
         StringBuffer sb = new StringBuffer();
@@ -19,7 +22,7 @@ public class Matrix{
             for(int j = 0; j < m; j++){
                 sb.append(arrayMatrix[i][j]);
                 if(j == (m - 1)){
-                    sb.append('\n');
+                    //sb.append('\n');
                 }
             }
         }
@@ -43,8 +46,15 @@ public class Matrix{
             System.out.println("FileNotFoundException");
             throw new FileNotFoundException();
         }
-
-
+    }
+    public void fillMatrix(String matrix, int n, int m){
+            this.n = n;
+            this.m = m;
+            char[] arr = matrix.toCharArray();
+            this.arrayMatrix = new char[n][m];
+            for (int i = 0; i < n; i++) {
+                System.arraycopy(arr, i*m, arrayMatrix[i], 0, m);
+            }
     }
 
 }

@@ -15,87 +15,38 @@
     <script src="codebase/dhtmlxgrid_srnd.js"></script>
     <script src="codebase/dhtmlxgridcell.js"></script>
     <script src="prototype.js"></script>
-
     <style type="text/css">
-
-        #gridMatrix {
-            width: 600px;
-            height: 400px;
-            float: left;
-            background: rgb(255,255,255);
-        }
-        #gridGraph {
-            width: 600px;
-            height: 400px;
-            float: right;
-            background: rgb(255,255,255);
-        }
-        #gridGraph #btn_graph {
-            position: absolute;
-            top: 10px;
-            right: 10px;
-        }
     </style>
 </head>
-
+<body>
 <h1><b>Онлайн калькулятор подсчета количества островов в матрице</b></h1>
 <h4>Введите данные</h4>
     <p><button type="submit" id="btn_matrix">Из файла</button></p>
-<fieldset>
-    <div id="gridMatrix" style="width:600px;height:400px;"></div>
-    <div id="gridGraph" style="width:600px;height:400px;">
-    </div>
-    <div id="gridResult" style="width:100px;height:500px;">
-    </div>
-
-
+    <p><button type="submit" id="btn_bd">Из базы данных</button></p>
+<%--<fieldset>--%>
+    <div id="gridMatrix" style="width:700px;height:400px;"></div>
     <script>
 
 
 
         var gridObjectMatrix = new dhtmlXGridObject("gridMatrix");
-        gridObjectMatrix.setHeader("Количество строк, Количество столбцов, Матрица");//the headers of columns
-        gridObjectMatrix.setInitWidths("250,250,100");
+        gridObjectMatrix.setHeader("Количество строк,Количество столбцов,Матрица,Ответ");//the headers of columns
+        gridObjectMatrix.setInitWidths("250,250,100,100");
      //   gridObject.enableAutoWidth(true);
      //   gridObject.enableAutoHeight(true);
      //   gridObject.setSizes();//the widths of columns
       //  gridObject.setColSorting("int,int,str");        //the sorting types
         gridObjectMatrix.init();      //finishes initialization and renders the grid on the page
 
-        var gridObjectGraph = new dhtmlXGridObject("gridGraph");
-        gridObjectGraph.setHeader("Размер, Матрица");//the headers of columns
-        gridObjectGraph.setInitWidths("250,100");
-        //   gridObject.enableAutoWidth(true);
-        //   gridObject.enableAutoHeight(true);
-        //   gridObject.setSizes();//the widths of columns
-        //  gridObject.setColSorting("int,int,str");        //the sorting types
-        gridObjectGraph.init();      //finishes initialization and renders the grid on the page
 
-        var gridResult = new dhtmlXGridObject("gridResult");
-        gridResult.setHeader("Ответ");//the headers of columns
-        gridResult.setInitWidths("100");
-        //   gridObject.enableAutoWidth(true);
-        //   gridObject.enableAutoHeight(true);
-        //   gridObject.setSizes();//the widths of columns
-        //  gridObject.setColSorting("int,int,str");        //the sorting types
-        gridResult.init();
 
-        var f = ${dataSet.data}
-
-            data={
-                rows:[
-                    { id:1, data: ["A Time to Kill", "John Grisham"]},
-                ]
-            };
         function btnClick1() {
-            new Ajax.Request('http://localhost:8090/MyWebProject/dataServlet', {
+            new Ajax.Request('http://localhost:8090/MyWebProject/data', {
                 method: 'get',
                 onSuccess: function (transport) {
                     var response = transport.responseText || "no response text";
                     var y = response.evalJSON(true);
                     gridObjectMatrix.parse(y.object1,"json");
-                    gridObjectGraph.parse(y.object2,"json");
-                    gridResult.parse(y.object3, "json");
                 },
                 onFailure: function () {
                     alert('Something went wrong...')
@@ -109,11 +60,31 @@
                 Event.observe('btn_matrix', 'click', btnClick1);
             }
         );
+        function btnClick2() {
+            new Ajax.Request('http://localhost:8090/MyWebProject/get', {
+                method: 'get',
+                onSuccess: function (transport) {
+                    var response = transport.responseText || "no response text";
+                    var y = response.evalJSON(true);
+                   gridObjectMatrix.parse(y,"json");
+                },
+                onFailure: function () {
+                    alert('Something went wrong...')
+                }
+            });
+
+
+        }
+        document.observe('dom:loaded',
+            function () {
+                Event.observe('btn_bd', 'click', btnClick2);
+            }
+        );
     </script>
 
-</fieldset>
+<%--</fieldset>--%>
 
-<script type="text/javascript" src="prototype.js"></script>
+
 </body>
 </html>
 

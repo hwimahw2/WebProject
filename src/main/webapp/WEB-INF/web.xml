@@ -8,9 +8,17 @@
         <servlet-class>ru.ncd.DataServlet</servlet-class>
 
     </servlet>
+    <servlet>
+        <servlet-name>GetDataFromDataBaseServlet</servlet-name>
+        <servlet-class>ru.ncd.GetDataFromDataBaseServlet</servlet-class>
+    </servlet>
 
     <servlet-mapping>
         <servlet-name>DataServlet</servlet-name>
-        <url-pattern>/dataServlet</url-pattern>
+        <url-pattern>/data</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>GetDataFromDataBaseServlet</servlet-name>
+        <url-pattern>/get</url-pattern>
     </servlet-mapping>
 </web-app>
