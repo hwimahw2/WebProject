@@ -37,10 +37,10 @@ public class Data {
         Matrix matrix = new Matrix();
         Graph graph = new Graph(matrix);
         this.matrix = matrix.toString();
-        graph = new Graph(matrix);
         n = matrix.n;
         m = matrix.m;
         result = countResult(matrix, graph);
+        int id = 33;
         final String JDBC_DRIVER = "org.h2.Driver";
         final String DB_URL = "jdbc:h2:~/test";
         final String USER = "sa";
@@ -54,7 +54,7 @@ public class Data {
             conn = DriverManager.getConnection(DB_URL, USER, PASS);
             System.out.println("Connected database successfully...");
             stmt = conn.createStatement();
-            String sql = "INSERT INTO ddbb VALUES (" + n + "," + m + "," + "\'" + this.matrix + "\'" + "," + result + ")";
+            String sql = "INSERT INTO datadata VALUES ("+ id + "," + n + "," + m + "," + "\'" + this.matrix + "\'" + ")";
             stmt.executeUpdate(sql);
             stmt.close();
             conn.close();

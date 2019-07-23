@@ -15,8 +15,7 @@ public class GetDataFromDataBaseServlet extends HttpServlet {
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         PrintWriter pw = response.getWriter();
         Data data = new Data();
+        data.addToDataBase();
         pw.print(data.getFromDataBase().toString());
-        int a = 5;
-        int b = 4;
     }
 }
