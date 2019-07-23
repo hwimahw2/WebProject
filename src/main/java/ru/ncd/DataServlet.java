@@ -12,7 +12,7 @@ public class DataServlet extends HttpServlet {
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException {
         PrintWriter pw = response.getWriter();
-        pw.print(new Data().getData());
+        pw.print(new Data().getDataFromFile());
         
     }
 }

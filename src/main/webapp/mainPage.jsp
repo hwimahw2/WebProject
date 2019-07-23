@@ -46,7 +46,7 @@
                 onSuccess: function (transport) {
                     var response = transport.responseText || "no response text";
                     var y = response.evalJSON(true);
-                    gridObjectMatrix.parse(y.object1,"json");
+                    gridObjectMatrix.parse(y,"json");
                 },
                 onFailure: function () {
                     alert('Something went wrong...')

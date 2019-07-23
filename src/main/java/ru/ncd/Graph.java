@@ -64,9 +64,11 @@ public class Graph {
                 arrayGraph[i * m + j][i * m + (j + 1)] = '1';
                 arrayGraph[i * m + (j + 1)][i * m + j] = '1';
             }
-            if (matrix.arrayMatrix[i][j] == matrix.arrayMatrix[i + 1][j]) {
-                arrayGraph[i * m + j][(i + 1) * m + j] = '1';
-                arrayGraph[(i + 1) * m + j][i * m + j] = '1';
+            if(n > 1) {
+                if (matrix.arrayMatrix[i][j] == matrix.arrayMatrix[i + 1][j]) {
+                    arrayGraph[i * m + j][(i + 1) * m + j] = '1';
+                    arrayGraph[(i + 1) * m + j][i * m + j] = '1';
+                }
             }
         }
     }
@@ -92,9 +94,11 @@ public class Graph {
     public void fillGraphFirstColumnOfMatrixWithoutFirstAndLast(Matrix matrix, int i, int j, int n, int m) {
         if (matrix.arrayMatrix[i][j] == '#') {
             arrayGraph[i * m + j][i * m + j] = '1';
-            if (matrix.arrayMatrix[i][j] == matrix.arrayMatrix[i][j + 1]) {
-                arrayGraph[i * m + j][i * m + (j + 1)] = '1';
-                arrayGraph[i * m + (j + 1)][i * m + j] = '1';
+            if(m > 1) {
+                if (matrix.arrayMatrix[i][j] == matrix.arrayMatrix[i][j + 1]) {
+                    arrayGraph[i * m + j][i * m + (j + 1)] = '1';
+                    arrayGraph[i * m + (j + 1)][i * m + j] = '1';
+                }
             }
             if (matrix.arrayMatrix[i][j] == matrix.arrayMatrix[i + 1][j]) {
                 arrayGraph[i * m + j][(i + 1) * m + j] = '1';
@@ -111,26 +115,34 @@ public class Graph {
     public void fillGraphLeftUpAngleOfMatrix(Matrix matrix, int i, int j, int n, int m) {
         if (matrix.arrayMatrix[i][j] == '#') {
             arrayGraph[i * m + j][i * m + j] = '1';
-            if (matrix.arrayMatrix[i][j] == matrix.arrayMatrix[i][j + 1]) {
-                arrayGraph[i * m + j][i * m + (j + 1)] = '1';
-                arrayGraph[i * m + (j + 1)][i * m + j] = '1';
+            if(m > 1) {
+                if (matrix.arrayMatrix[i][j] == matrix.arrayMatrix[i][j + 1]) {////////////////+++++++++++
+                    arrayGraph[i * m + j][i * m + (j + 1)] = '1';
+                    arrayGraph[i * m + (j + 1)][i * m + j] = '1';
+                }
             }
-            if (matrix.arrayMatrix[i][j] == matrix.arrayMatrix[i + 1][j]) {
-                arrayGraph[i * m + j][(i + 1) * m + j] = '1';
-                arrayGraph[(i + 1) * m + j][i * m + j] = '1';
+            if(n > 1) {
+                if (matrix.arrayMatrix[i][j] == matrix.arrayMatrix[i + 1][j]) {
+                    arrayGraph[i * m + j][(i + 1) * m + j] = '1';
+                    arrayGraph[(i + 1) * m + j][i * m + j] = '1';
+                }
             }
         }
     }
     public void fillGraphRightUpAngleOfMatrix(Matrix matrix, int i, int j, int n, int m) {
         if (matrix.arrayMatrix[i][j] == '#') {
             arrayGraph[i * m + j][i * m + j] = '1';
-            if(matrix.arrayMatrix[i][j] == matrix.arrayMatrix[i][j - 1]) {
-                arrayGraph[i * m + j][i * m + (j - 1)] = '1';
-                arrayGraph[i * m + (j - 1)][i * m + j] = '1';
+            if(m > 1) {
+                if (matrix.arrayMatrix[i][j] == matrix.arrayMatrix[i][j - 1]) {
+                    arrayGraph[i * m + j][i * m + (j - 1)] = '1';
+                    arrayGraph[i * m + (j - 1)][i * m + j] = '1';
+                }
             }
-            if (matrix.arrayMatrix[i][j] == matrix.arrayMatrix[i + 1][j]) {
-                arrayGraph[i * m + j][(i + 1) * m + j] = '1';
-                arrayGraph[(i + 1) * m + j][i * m + j] = '1';
+            if(n > 1) {
+                if (matrix.arrayMatrix[i][j] == matrix.arrayMatrix[i + 1][j]) {
+                    arrayGraph[i * m + j][(i + 1) * m + j] = '1';
+                    arrayGraph[(i + 1) * m + j][i * m + j] = '1';
+                }
             }
         }
     }
@@ -138,9 +150,11 @@ public class Graph {
     public void fillGraphLeftDownAngleOfMatrix(Matrix matrix, int i, int j, int n, int m) {
         if (matrix.arrayMatrix[i][j] == '#') {
             arrayGraph[i * m + j][i * m + j] = '1';
-            if (matrix.arrayMatrix[i][j] == matrix.arrayMatrix[i][j + 1]) {
-                arrayGraph[i * m + j][i * m + (j + 1)] = '1';
-                arrayGraph[i * m + (j + 1)][i * m + j] = '1';
+            if(m > 1) {
+                if (matrix.arrayMatrix[i][j] == matrix.arrayMatrix[i][j + 1]) {
+                    arrayGraph[i * m + j][i * m + (j + 1)] = '1';
+                    arrayGraph[i * m + (j + 1)][i * m + j] = '1';
+                }
             }
             if (matrix.arrayMatrix[i][j] == matrix.arrayMatrix[i - 1][j]) {
                 arrayGraph[i * m + j][(i - 1) * m + j] = '1';
@@ -188,6 +202,9 @@ public class Graph {
             for (int j = 0; j < this.n; j++) {
                 arrayGraph[i][j] = '0';
             }
+        }
+        if(n >= 1 && m >= 1){
+
         }
 
         for (int i = 0; i < n; i++) {
