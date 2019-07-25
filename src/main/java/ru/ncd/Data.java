@@ -17,7 +17,6 @@ public class Data {
         this.m = matrix.m;
         this.matrix = matrix.toString();
         result = countResult(matrix, graph);
-        // return this.toJasonFile(matrix, graph).toString();
         return this.toJasonFile().toString();
     }
 
@@ -66,7 +65,7 @@ public class Data {
             try {
                 if (stmt != null) stmt.close();
             } catch (SQLException se2) {
-            } // nothing we can do
+            }
             try {
                 if (conn != null) conn.close();
             } catch (SQLException se) {
@@ -78,8 +77,6 @@ public class Data {
     public JSONObject getFromDataBase() {
         final String JDBC_DRIVER = "org.h2.Driver";
         final String DB_URL = "jdbc:h2:~/test";
-
-        //  Database credentials
         final String USER = "sa";
         final String PASS = "";
 
@@ -124,7 +121,6 @@ public class Data {
                 se.printStackTrace();
             }
         }
-        //jsonMain.element("rows", rows);
         return jsonMain;
     }
 
@@ -177,11 +173,6 @@ public class Data {
         json.element("data", data);
         rows.element(json);
         jsonMain.element("rows", rows);
-        String str = jsonMain.toString();
-        int a = 5;
-        String jjj = jsonMain.toString();
-        String mtr = jsonMain.toString();
-        String gtr = jsonMain.toString();
         return jsonMain;
     }
 }

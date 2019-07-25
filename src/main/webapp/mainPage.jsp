@@ -30,18 +30,14 @@
 
 
         var gridObjectMatrix = new dhtmlXGridObject("gridMatrix");
-        gridObjectMatrix.setHeader("Количество строк,Количество столбцов,Матрица,Ответ");//the headers of columns
+        gridObjectMatrix.setHeader("Количество строк,Количество столбцов,Матрица,Ответ");
         gridObjectMatrix.setInitWidths("250,250,100,100");
-     //   gridObject.enableAutoWidth(true);
-     //   gridObject.enableAutoHeight(true);
-     //   gridObject.setSizes();//the widths of columns
-      //  gridObject.setColSorting("int,int,str");        //the sorting types
-        gridObjectMatrix.init();      //finishes initialization and renders the grid on the page
+        gridObjectMatrix.init();
 
 
 
         function btnClick1() {
-            new Ajax.Request('http://localhost:8090/MyWebProject/data', {
+            new Ajax.Request('http://localhost:8090/MyWebProject/dataFile', {
                 method: 'get',
                 onSuccess: function (transport) {
                     var response = transport.responseText || "no response text";
@@ -61,7 +57,7 @@
             }
         );
         function btnClick2() {
-            new Ajax.Request('http://localhost:8090/MyWebProject/get', {
+            new Ajax.Request('http://localhost:8090/MyWebProject/dataDataBase', {
                 method: 'get',
                 onSuccess: function (transport) {
                     var response = transport.responseText || "no response text";
@@ -82,58 +78,5 @@
         );
     </script>
 
-<%--</fieldset>--%>
-
-
 </body>
 </html>
-
-
-
-<%--
-
-
-
-
-
-    function btnWriteClicked(){
-        new Ajax.Request('http://localhost:8090/WebProject1/FirstServlet', {
-            method:'get',
-            onSuccess: function(transport) {
-                var response = transport.responseText || "no response text";
-                alert("Success! \n\n" + response);
-            },
-            parameters: {date: $F('date'), direction: $F('direction'), comment: $F('text')}
-        });
-    }
-
-    document.observe('dom:loaded',
-        function () {
-            Event.observe('btn_write', 'click', btnWriteClicked);
-        }
-    );
-
-    var dataset = [
-        {
-            "id": 0,
-            "a": 1,
-            "b": "Linwood Long long long",
-            "c": "Petersen",
-            "d": "Dahlgreen Place"
-        },
-        {
-            "id": 1,
-            "a": 2,
-            "b": "Edenburg",
-            "c": "Agnes",
-            "d": "Gem Street"
-        },
-        // more columns
-    ];
-
-    var grid = new dhx.Grid('dataset');
-    grid.data.load(dataset);
-
-
-</script>--%>
-
