@@ -13,6 +13,5 @@ public class GetDataFromFileServlet extends HttpServlet {
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException {
         PrintWriter pw = response.getWriter();
         pw.print(new Data().getDataFromFile());
-        
     }
 }

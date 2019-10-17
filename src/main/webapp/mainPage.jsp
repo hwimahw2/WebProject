@@ -9,11 +9,11 @@
     <link rel="STYLESHEET" type="text/css" href="codebase/dhtmlxgrid.css">
     <script src="codebase/dhtmlxcommon.js"></script>
     <script src="codebase/dhtmlxgrid.js"></script>
+    <script src="codebase/dhtmlxgridcell.js"></script>
     <script src="codebase/dhtmlxgrid_json.js"></script>
     <script src="codebase/dhtmlxgrid_mcol.js"></script>
     <script src="codebase/dhtmlxgrid_ssc.js"></script>
     <script src="codebase/dhtmlxgrid_srnd.js"></script>
-    <script src="codebase/dhtmlxgridcell.js"></script>
     <script src="prototype.js"></script>
     <style type="text/css">
     </style>
@@ -41,15 +41,13 @@
                 method: 'get',
                 onSuccess: function (transport) {
                     var response = transport.responseText || "no response text";
-                    var y = response.evalJSON(true);
-                    gridObjectMatrix.parse(y,"json");
+                //    var y = response.evalJSON(true);
+                //    gridObjectMatrix.parse(y,"json");
                 },
                 onFailure: function () {
                     alert('Something went wrong...')
                 }
             });
-
-
         }
         document.observe('dom:loaded',
             function () {
@@ -68,8 +66,6 @@
                     alert('Something went wrong...')
                 }
             });
-
-
         }
         document.observe('dom:loaded',
             function () {
