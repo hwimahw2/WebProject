@@ -15,6 +15,18 @@ public class Graph {
         fillGraph(matrix, matrix.n, matrix.m);
     }
 
+    public int countResult(Matrix matrix) {
+        int quantityOfDots = 0;
+        for (int i = 0; i < matrix.n; i++) {
+            for (int j = 0; j < matrix.m; j++) {
+                if (matrix.arrayMatrix[i][j] == '.') {
+                    quantityOfDots++;
+                }
+            }
+        }
+        return quantityOfIslands() - quantityOfDots;
+    }
+
     public String toString(){
         StringBuffer sb = new StringBuffer();
         for(int i = 0; i < n; i++){
@@ -240,10 +252,10 @@ public class Graph {
         }
     }
 
-    public int quantityOfIslands(Graph graph){
+    public int quantityOfIslands(){
         ArrayList<Island> islands = new ArrayList<>();
         int quantityOfConnectedComponent = 0;
-        for(int i = 0; i < graph.n; i++){
+        for(int i = 0; i < this.n; i++){
             Island island;
             if(numberOfConnectedComponent[i] == 0){
                 island = new Island();

@@ -4,21 +4,21 @@
          xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd"
          version="4.0">
     <servlet>
-        <servlet-name>GetDataFromFileServlet</servlet-name>
-        <servlet-class>ru.ncd.GetDataFromFileServlet</servlet-class>
+        <servlet-name>FileServlet</servlet-name>
+        <servlet-class>ru.ncd.FileServlet</servlet-class>
 
     </servlet>
     <servlet>
-        <servlet-name>GetDataFromDataBaseServlet</servlet-name>
-        <servlet-class>ru.ncd.GetDataFromDataBaseServlet</servlet-class>
+        <servlet-name>DataBaseServlet</servlet-name>
+        <servlet-class>ru.ncd.DataBaseServlet</servlet-class>
     </servlet>
 
     <servlet-mapping>
-        <servlet-name>GetDataFromFileServlet</servlet-name>
+        <servlet-name>FileServlet</servlet-name>
         <url-pattern>/dataFile</url-pattern>
     </servlet-mapping>
     <servlet-mapping>
-        <servlet-name>GetDataFromDataBaseServlet</servlet-name>
+        <servlet-name>DataBaseServlet</servlet-name>
         <url-pattern>/dataDataBase</url-pattern>
     </servlet-mapping>
 </web-app>
